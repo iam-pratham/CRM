@@ -25,7 +25,6 @@ export default function TasksPage() {
   const [isAdding, setIsAdding] = useState(false);
   const [newTaskTitle, setNewTaskTitle] = useState("");
   const [newTaskPriority, setNewTaskPriority] = useState<Priority>("medium");
-  const [newTaskPoints, setNewTaskPoints] = useState(50);
 
   const handleAddTask = (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,7 +34,6 @@ export default function TasksPage() {
       title: newTaskTitle,
       description: "",
       priority: newTaskPriority,
-      points: newTaskPoints,
     });
     
     setNewTaskTitle("");
@@ -80,7 +78,7 @@ export default function TasksPage() {
             <div className="rounded-xl border border-white/10 bg-zinc-900/50 p-6 mb-8 relative">
                <form onSubmit={handleAddTask} className="relative z-10 space-y-4">
                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
-                     <div className="md:col-span-6 space-y-2">
+                     <div className="md:col-span-8 space-y-2">
                       <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Task Description</label>
                       <input
                         type="text"
@@ -102,15 +100,6 @@ export default function TasksPage() {
                          <option value="medium">Class B (Medium)</option>
                          <option value="high">Class A (High)</option>
                        </select>
-                     </div>
-                     <div className="md:col-span-2 space-y-2">
-                       <label className="text-xs font-bold text-indigo-300 uppercase tracking-widest">Reward (XP)</label>
-                       <input
-                         type="number"
-                         className="w-full bg-zinc-950 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white/20 transition-all"
-                         value={newTaskPoints}
-                         onChange={(e) => setNewTaskPoints(Number(e.target.value))}
-                       />
                      </div>
                      <div className="md:col-span-1">
                        <div className="flex gap-2">
