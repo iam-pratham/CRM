@@ -7,9 +7,9 @@ import { TiltCard } from "@/components/ui/tilt-card";
 
 // Mock Data for Leaderboard
 const MOCK_LEADERBOARD = [
-  { id: 1, name: "Shreyash", role: "Product Designer", points: 2450, avatar: "SH" },
-  { id: 2, name: "Pratham", role: "Frontend Dev", points: 2100, avatar: "PR" },
-  { id: 3, name: "Rohan", role: "Marketing", points: 1950, avatar: "RO" },
+  { id: 1, name: "Shreyash", role: "Full-stack Dev", points: 2450, avatar: "SH" },
+  { id: 2, name: "Pratham", role: "Frontend/UX", points: 2100, avatar: "PR" },
+  { id: 3, name: "Rohan", role: "Backend Dev", points: 1950, avatar: "RO" },
   { id: 4, name: "Bramha", role: "Backend Dev", points: 1800, avatar: "BR" },
   { id: 5, name: "Vaishnavi", role: "Manager", points: 1650, avatar: "VA" },
   { id: 6, name: "Rani", role: "UX Researcher", points: 1500, avatar: "RA" },
