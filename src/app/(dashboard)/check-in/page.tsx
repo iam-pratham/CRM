@@ -87,7 +87,7 @@ export default function CheckInPage() {
                     <p className="text-zinc-400 text-sm">Select your current status.</p>
                   </div>
                   
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
                       { label: "Optimal", value: "High", icon: Battery },
                       { label: "Nominal", value: "Medium", icon: BatteryMedium },
@@ -96,10 +96,10 @@ export default function CheckInPage() {
                       <button
                         key={item.label}
                         onClick={() => setMood(item.value)}
-                        className={`flex flex-col items-center gap-4 p-6 rounded-2xl border transition-all duration-300 group ${mood === item.value ? `border-white bg-zinc-800` : "border-white/5 bg-zinc-900 hover:bg-zinc-800"}`}
+                        className={`flex flex-row md:flex-col items-center gap-4 p-4 md:p-6 rounded-2xl border transition-all duration-300 group ${mood === item.value ? `border-white bg-zinc-800` : "border-white/5 bg-zinc-900 hover:bg-zinc-800"}`}
                       >
-                        <div className={`p-4 rounded-full transition-transform ${mood === item.value ? 'bg-white text-black scale-110' : 'bg-zinc-800 text-zinc-400 group-hover:text-white'}`}>
-                           <item.icon className="h-8 w-8" />
+                        <div className={`p-3 md:p-4 rounded-full transition-transform ${mood === item.value ? 'bg-white text-black scale-110' : 'bg-zinc-800 text-zinc-400 group-hover:text-white'}`}>
+                           <item.icon className="h-6 w-6 md:h-8 md:w-8" />
                         </div>
                         <span className={`font-bold text-sm uppercase tracking-wider ${mood === item.value ? 'text-white' : 'text-zinc-500 group-hover:text-zinc-300'}`}>{item.label}</span>
                       </button>

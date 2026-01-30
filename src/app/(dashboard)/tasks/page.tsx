@@ -118,9 +118,9 @@ export default function TasksPage() {
         )}
       </AnimatePresence>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 h-full overflow-x-auto pb-4">
+      <div className="flex md:grid md:grid-cols-4 gap-6 h-full overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:scrollbar-default">
         {columns.map((col) => (
-          <div key={col.id} className="flex flex-col h-full min-w-[280px]">
+          <div key={col.id} className="flex flex-col h-full min-w-[85vw] md:min-w-0 snap-center first:pl-4 md:first:pl-0 last:pr-4 md:last:pr-0">
             {/* Column Header */}
             <div className={`mb-4 p-3 rounded-xl bg-gradient-to-r ${col.color} border border-white/5 backdrop-blur-md flex items-center justify-between group`}>
                <div className="flex items-center gap-2 font-bold text-white text-sm tracking-wider">
